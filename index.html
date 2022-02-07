@@ -12,9 +12,38 @@
         padding: 0;
       }
 
+      main {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+      }
+
+      body {
+        background-color: #d6daec;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: bely, serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #4958a3;
+      }
+
+      p {
+        color: rgb(0, 0, 0);
+        font-family: nimbus-sans, sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 23px;
+      }
+
       img {
         max-width: 100%;
-        height: auto;
+        max-height: 300px;
       }
       section {
         display: grid;
@@ -23,16 +52,21 @@
       }
       article {
         display: block;
-        border: 3px solid rgb(124, 95, 95);
+        background-color: #ffffff;
         padding: 10px;
       }
 
-      nav {
+      nav,
+      h1 {
         display: flex;
         justify-content: center;
         gap: 0.2rem;
         padding: 0.2rem;
         margin: 0.2rem;
+      }
+
+      nav {
+        padding-bottom: 5%;
       }
 
       button {
@@ -41,7 +75,25 @@
       }
 
       .valgt {
-        background-color: aqua;
+        background-color: #4958a3;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 7px 14px 7px;
+        margin-top: 30px;
+        border: 0;
+        background-color: #a8b2e4;
+        color: white;
+        font-family: bely, serif;
+        font-weight: 700;
+        font-style: normal;
+        cursor: pointer;
+      }
+
+      button:hover {
+        transition: 0.5s;
+        background-color: #9098c2;
       }
     </style>
   </head>
@@ -126,7 +178,7 @@
               klon.querySelector(".navn").textContent = ret.navn;
               klon.querySelector(".beskrivelse").textContent =
                 ret.kortbeskrivelse;
-              klon.querySelector(".pris").textContent = ret.pris + "kr";
+              klon.querySelector(".pris").textContent = ret.pris + " - kr";
 
               dest.appendChild(klon);
             }
